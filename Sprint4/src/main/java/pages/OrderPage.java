@@ -105,7 +105,7 @@ public class OrderPage extends BasePage {
 
         metroInput.sendKeys(metro);
 
-        String metroXpath = "//div[contains(@class, 'Order_List')]//div[contains(text(), '" + metro + "')]";
+        String metroXpath = "//div[contains(@class, 'Order_List')]//button[contains(text(), '" + metro + "')]";
         WebElement metroOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(metroXpath)));
         metroOption.click();
 

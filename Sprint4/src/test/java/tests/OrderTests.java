@@ -55,10 +55,10 @@ public class OrderTests extends BrowserSetting {
         String browser = System.getProperty("browser", "chrome");
 
         if ("chrome".equalsIgnoreCase(browser) && !success) {
-            System.out.println(" Найден баг в Chrome: заказ не создается через верхнюю кнопку");
+            System.out.println(" Найден баг в Chrome: тест падает на выборе станции метро!");
         }
 
-        assertTrue("Заказ не был успешно создан через верхнюю кнопку!", success);
+        assertTrue("Заказ не был успешно создан через верхнюю кнопку! Ошибка при выборе станции метро.", success);
     }
 
     @Test
@@ -74,9 +74,9 @@ public class OrderTests extends BrowserSetting {
         String browser = System.getProperty("browser", "chrome");
 
         if ("chrome".equalsIgnoreCase(browser) && !success) {
-            System.out.println(" Найден баг в Chrome: заказ не создается через нижнюю кнопку");
+            System.out.println(" Найден баг в Chrome: тест падает при выборе станции метро!");
         }
 
-        assertTrue("Заказ не был успешно создан через нижнюю кнопку!", success);
+        assertTrue("Заказ не был успешно создан через нижнюю кнопку! Ошибка при выборе станции метро.", success);
     }
 }
